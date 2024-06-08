@@ -20,8 +20,8 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <5 6>;
-            then-layer = <7>;
+            if-layers = <3 4>;
+            then-layer = <5>;
         };
     };
 
@@ -108,8 +108,8 @@
             bindings = <
   &kp Q           &kp W           &kp E         &kp R             &kp T    &kp Y      &kp U          &kp I        &kp O           &kp P
   &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D   &mt LEFT_SHIFT F  &kp G    &kp H      &mt RSHIFT J   &mt RCTRL K  &mt LEFT_ALT L  &mt RGUI SEMI
-  &lt 7 Z         &kp X           &kp C         &kp V             &kp B    &kp N      &kp M          &kp COMMA    &kp DOT         &kp FSLH
-                                  &kp LEFT_GUI  &kp SPACE         &sl 1    &kp ENTER  &kp BACKSPACE  &to 2
+  &lt 5 Z         &kp X           &kp C         &kp V             &kp B    &kp N      &kp M          &kp COMMA    &kp DOT         &kp FSLH
+                                  &kp LEFT_GUI  &kp SPACE         &sl 1    &kp ENTER  &kp BACKSPACE  &mo 4
             >;
         };
 
@@ -119,24 +119,6 @@
   &kp LBKT   &kp LBRC  &kp LPAR   &kp PERCENT  &kp EQUAL    &kp AMPS   &kp DOUBLE_QUOTES  &kp AT     &kp STAR    &kp SLASH
   &kp RBKT   &kp RBRC  &kp RPAR   &trans       &kp UNDER    &kp PIPE   &kp SQT            &trans     &trans      &trans
                        &to 0      &kp SPACE    &to 0        &kp ENTER  &kp BACKSPACE      &to 0
-            >;
-        };
-
-        Fun {
-            bindings = <
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                  &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        default_layer {
-            bindings = <
-  &kp Q  &kp W  &kp F     &kp P  &kp B          &kp J      &kp L  &kp U        &kp Y       &kp APOS
-  &kp A  &kp R  &kp S     &kp T  &kp G          &kp M      &kp N  &kp E        &kp I       &kp O
-  &kp Z  &kp X  &kp C     &kp D  &kp V          &kp K      &kp H  &comma_semi  &dot_colon  &qmrk_excl
-                &kp LGUI  &mo 5  &smart_shft    &kp SPACE  &mo 6  &super_bspc
             >;
         };
 
@@ -169,7 +151,7 @@
 
         fun_layer {
             bindings = <
-  &tog 4        &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_TOG    &trans  &kp F7  &kp F8  &kp F9  &kp F12
+  &tog 2        &kp K_MUTE    &kp C_VOL_DN  &kp C_VOL_UP  &out OUT_TOG    &trans  &kp F7  &kp F8  &kp F9  &kp F12
   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans  &kp F4  &kp F5  &kp F6  &kp F11
   &bt BT_CLR    &kp C_PREV    &kp C_PP      &kp C_NEXT    &trans          &trans  &kp F1  &kp F2  &kp F3  &kp F10
                               &trans        &trans        &trans          &trans  &trans  &trans
