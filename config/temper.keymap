@@ -15,82 +15,21 @@
 #define NAV 3
 #define FUN 4
 
+&lt {
+    tapping-term-ms = <240>;
+    quick-tap-ms = <150>;
+    require-prior-idle-ms = <10>;
+    flavor = "tap-preferred";
+};
+
+&mt {
+    tapping-term-ms = <250>;
+    require-prior-idle-ms = <250>;
+    flavor = "tap-preferred";
+};
+
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-
-        tri_layer {
-            if-layers = <3 4>;
-            then-layer = <5>;
-        };
-    };
-
-    behaviors {
-        bspc_del: backspace_delete {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-            keep-mods = <(MOD_RSFT)>;
-        };
-
-        super_bspc: super_backspace {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
-
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        smart_shft: smart_shift {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&caps_word>;
-
-            mods = <(MOD_LSFT)>;
-        };
-
-        comma_semi: comma_semi {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
-
-            mods = <(MOD_LSFT)>;
-        };
-
-        dot_colon: dot_colon {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp COLON>;
-
-            mods = <(MOD_LSFT)>;
-        };
-
-        qmrk_excl: qmrk_excl {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp QMARK>, <&kp EXCL>;
-
-            mods = <(MOD_LSFT)>;
-        };
-
-        slh_morph: slh_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp FSLH>, <&kp BSLH>;
-
-            mods = <(MOD_LSFT)>;
-        };
-
-        amps_morph: amps_morph {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp AMPS>, <&kp PIPE>;
-
-            mods = <(MOD_LSFT)>;
-        };
-    };
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 
     combos {
         compatible = "zmk,combos";
@@ -98,6 +37,11 @@
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <0 1>;
+        };
+
+        combo_capture_screen {
+            bindings = <&kp LS(LC(LG(NUMBER_4)))>;
+            key-positions = <0 1 2>;
         };
     };
 
@@ -133,16 +77,16 @@
 
         num_layer {
             bindings = <
-  &kp TILDE    &kp AT    &kp LBRC  &kp RBRC  &kp PRCNT    &kp STAR    &kp N7  &kp N8  &kp N9  &kp MINUS
-  &kp CARET    &kp HASH  &kp LPAR  &kp RPAR  &kp DLLR     &kp UNDER   &kp N4  &kp N5  &kp N6  &kp PLUS
-  &amps_morph  &kp LT    &kp LBKT  &kp RBKT  &kp GT       &slh_morph  &kp N1  &kp N2  &kp N3  &kp EQUAL
-                         &trans    &trans    &trans       &kp N0      &trans  &trans
+  &kp TILDE  &kp AT    &kp LBRC  &kp RBRC  &kp PRCNT    &kp STAR   &kp N7  &kp N8  &kp N9  &kp MINUS
+  &kp CARET  &kp HASH  &kp LPAR  &kp RPAR  &kp DLLR     &kp UNDER  &kp N4  &kp N5  &kp N6  &kp PLUS
+  &none      &kp LT    &kp LBKT  &kp RBKT  &kp GT       &none      &kp N1  &kp N2  &kp N3  &kp EQUAL
+                       &trans    &trans    &trans       &kp N0     &trans  &trans
             >;
         };
 
         nav_layer {
             bindings = <
-  &trans     &trans     &trans    &trans    &trans     &trans    &kp HOME  &kp END  &kp TAB    &super_bspc
+  &trans     &trans     &trans    &trans    &trans     &trans    &kp HOME  &kp END  &kp TAB    &none
   &sk LSHFT  &sk LCTRL  &sk LALT  &sk LGUI  &kp TAB    &kp LEFT  &kp DOWN  &kp UP   &kp RIGHT  &gresc
   &trans     &kp DEL    &trans    &trans    &trans     &trans    &kp RET   &trans   &trans     &trans
                         &trans    &trans    &trans     &trans    &trans    &trans
