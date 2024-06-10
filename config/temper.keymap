@@ -56,7 +56,7 @@
 
             mods = <(MOD_LSFT)>;
         };
-    }
+    };
 
     combos {
         compatible = "zmk,combos";
