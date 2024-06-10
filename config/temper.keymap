@@ -31,6 +31,33 @@
 / {
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
+    behaviors {
+        bspc_del: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_RSFT)>;
+        };
+
+        super_bspc: super_backspace {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
+
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        smart_shft: smart_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT>, <&caps_word>;
+
+            mods = <(MOD_LSFT)>;
+        };
+    }
+
     combos {
         compatible = "zmk,combos";
 
