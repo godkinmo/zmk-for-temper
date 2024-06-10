@@ -83,10 +83,10 @@
 
         num_layer {
             bindings = <
-  &kp TILDE  &kp AT    &kp LBRC  &kp RBRC   &kp PRCNT    &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp MINUS
-  &kp CARET  &kp HASH  &kp LPAR  &kp RPAR   &kp DLLR     &kp KP_DIVIDE    &kp N4  &kp N5  &kp N6  &kp PLUS
-  &none      &kp LT    &kp LBKT  &kp RBKT   &kp GT       &kp KP_DOT       &kp N1  &kp N2  &kp N3  &kp EQUAL
-                       &to 0     &kp SPACE  &to 0        &kp N0           &none   &to 3
+  &none           &none         &none     &none      &none    &kp KP_MULTIPLY  &kp N7     &kp N8  &kp N9  &kp MINUS
+  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN  &kp RIGHT  &none    &kp KP_DIVIDE    &kp N4     &kp N5  &kp N6  &kp PLUS
+  &none           &none         &none     &none      &none    &kp KP_DOT       &kp KP_N1  &kp N2  &kp N3  &kp EQUAL
+                                &to 0     &kp SPACE  &to 0    &kp N0           &none      &to 3
             >;
         };
 
@@ -95,7 +95,7 @@
   &kp TAB         &none    &none     &none      &none      &none      &kp HOME         &kp END    &kp TAB       &none
   &kp LEFT        &kp UP   &kp DOWN  &kp RIGHT  &kp TAB    &gresc     &sk RIGHT_SHIFT  &sk RCTRL  &sk LEFT_ALT  &sk RIGHT_GUI
   &sk LEFT_SHIFT  &kp DEL  &none     &none      &none      &none      &kp RET          &none      &none         &none
-                           &to 0     &kp SPACE  &to 0      &kp ENTER  &to 2            &to 3
+                           &to 0     &kp SPACE  &to 0      &kp ENTER  &to 2            &none
             >;
         };
 
