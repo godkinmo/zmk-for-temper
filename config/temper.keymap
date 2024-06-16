@@ -90,6 +90,11 @@
             bindings = <&kp DOWN>;
             key-positions = <1 2>;
         };
+
+        combo_up {
+            bindings = <&kp UP>;
+            key-positions = <7 8>;
+        };
     };
 
     keymap {
