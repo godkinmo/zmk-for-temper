@@ -152,7 +152,7 @@
         DeadState_v2 {
             bindings = <
   &kp AMPS     &kp LBKT  &kp LBRC  &kp RBRC   &kp LPAR          &kp EQUAL  &kp STAR       &kp RPAR      &kp PLUS    &kp RBKT
-  &kp TILDE    &kp LT    &kp GT    &kp AT     &kp MINUS         &kp GRAVE  &kp DQT        &kp COLON     &kp DOLLAR  &kp BACKSLASH
+  &kp TILDE    &kp AT    &kp LT    &kp GT     &kp MINUS         &kp GRAVE  &kp DQT        &kp COLON     &kp DOLLAR  &kp BACKSLASH
   &kp PERCENT  &none     &none     &none      &kp UNDERSCORE    &kp PIPE   &kp EXCL       &kp QUESTION  &kp CARET   &kp SLASH
                          &to 0     &kp SPACE  &sk LEFT_SHIFT    &kp TAB    &kp BACKSPACE  &to 0
             >;
@@ -160,10 +160,10 @@
 
         Dvorak_DeadState_v2 {
             bindings = <
-  &kp N1      &kp N2     &kp N3     &kp N4        &kp N5            &kp N6    &kp N7         &kp N8        &kp N9        &kp N0
-  &kp TILDE   &kp LS(W)  &kp LS(E)  &kp LS(RBKT)  &kp KP_MINUS      &kp PLUS  &kp LS(Z)      &kp LS(Q)     &kp GRAVE     &kp BACKSLASH
-  &kp LS(N1)  &none      &none      &none         &kp LS(SQT)       &kp PIPE  &kp MINUS      &kp LS(LBKT)  &kp LS(RBKT)  &kp LBKT
-                         &to 0      &kp SPACE     &sk LEFT_SHIFT    &kp TAB   &kp BACKSPACE  &to 0
+  &kp N1      &kp N2    &kp N3     &kp N4     &kp N5            &kp N6    &kp N7         &kp N8        &kp N9        &kp N0
+  &kp TILDE   &kp RBKT  &kp LS(W)  &kp LS(E)  &kp KP_MINUS      &kp PLUS  &kp LS(Z)      &kp LS(Q)     &kp GRAVE     &kp BACKSLASH
+  &kp LS(N1)  &none     &none      &none      &kp LS(SQT)       &kp PIPE  &kp MINUS      &kp LS(LBKT)  &kp LS(RBKT)  &kp LBKT
+                        &to 0      &kp SPACE  &sk LEFT_SHIFT    &kp TAB   &kp BACKSPACE  &to 0
             >;
         };
     };
