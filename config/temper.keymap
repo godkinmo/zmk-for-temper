@@ -71,11 +71,6 @@
             key-positions = <0 1 2>;
         };
 
-        combo_caps {
-            bindings = <&kp CAPSLOCK>;
-            key-positions = <14 15>;
-        };
-
         combo_left {
             bindings = <&kp LEFT_ARROW>;
             key-positions = <27 26>;
