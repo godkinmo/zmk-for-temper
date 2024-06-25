@@ -108,10 +108,10 @@
 
         BaseWin {
             bindings = <
-  &kp Q           &kp W           &kp E        &kp R             &kp T    &kp Y      &kp U          &kp I        &kp O           &kp P
-  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LCTRL D  &mt LEFT_SHIFT F  &kp G    &kp H      &mt RSHIFT J   &mt RCTRL K  &mt LEFT_ALT L  &mt RGUI SEMI
-  &lt 4 Z         &kp X           &kp C        &kp V             &kp B    &kp N      &kp M          &kp COMMA    &kp DOT         &lt 6 SLASH
-                                  &kp LCTRL    &kp SPACE         &sl 3    &kp ENTER  &kp BACKSPACE  &sl 5
+  &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
+  &trans  &trans  &trans     &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                  &kp LCTRL  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
