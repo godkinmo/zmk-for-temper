@@ -29,7 +29,14 @@
 };
 
 / {
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        BaseWin {
+            if-layers = <1>;
+            then-layer = <1>;
+        };
+    };
 
     behaviors {
         bspc_del: backspace_delete {
