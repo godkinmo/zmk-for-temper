@@ -142,9 +142,9 @@
 
         nav_layer {
             bindings = <
-  &kp TAB         &none    &none     &none      &none      &none      &kp HOME         &kp END    &kp TAB       &none
-  &kp LEFT        &kp UP   &kp DOWN  &kp RIGHT  &kp TAB    &gresc     &sk RIGHT_SHIFT  &sk RCTRL  &sk LEFT_ALT  &sk RIGHT_GUI
-  &sk LEFT_SHIFT  &kp DEL  &none     &none      &none      &none      &kp RET          &none      &kp LEFT      &kp RIGHT
+  &kp TAB         &none    &none     &none      &none      &none      &kp HOME         &kp END    &kp LA(LG(LEFT_BRACKET))  &kp LA(LG(RIGHT_BRACKET))
+  &kp LEFT        &kp UP   &kp DOWN  &kp RIGHT  &kp TAB    &gresc     &sk RIGHT_SHIFT  &sk RCTRL  &sk LEFT_ALT              &sk RIGHT_GUI
+  &sk LEFT_SHIFT  &kp DEL  &none     &none      &none      &none      &kp RET          &none      &kp LEFT                  &kp RIGHT
                            &to 0     &kp SPACE  &to 0      &kp ENTER  &to 3            &to 0
             >;
         };
