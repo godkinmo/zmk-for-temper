@@ -142,10 +142,10 @@
 
         num_layer {
             bindings = <
-  &kp LS(N1)      &kp KP_N7     &kp KP_N5     &kp KP_N3       &kp KP_NUMBER_1    &kp KP_N9      &kp KP_N0  &kp KP_N2         &kp KP_N4         &kp KP_N6
-  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN      &kp RIGHT       &kp KP_NUMLOCK     &kp KP_DIVIDE  &kp KP_N4  &kp LA(LG(LBKT))  &kp LA(LG(RBKT))  &kp KP_N8
-  &none           &kp LCTRL     &none         &kp LS(DELETE)  &kp DELETE         &kp KP_DOT     &kp KP_N1  &kp KP_N2         &kp KP_N3         &kp KP_EQUAL
-                                &kp LEFT_GUI  &kp SPACE       &to 0              &kp KP_N0      &to 0      &to 4
+  &kp LS(N1)      &kp KP_N7     &kp KP_N5     &kp KP_N3       &kp KP_NUMBER_1    &kp KP_N9      &kp KP_N0      &kp KP_N2         &kp KP_N4         &kp KP_N6
+  &kp LEFT_ARROW  &kp UP_ARROW  &kp DOWN      &kp RIGHT       &kp KP_NUMLOCK     &kp KP_DIVIDE  &kp KP_N4      &kp LA(LG(LBKT))  &kp LA(LG(RBKT))  &kp KP_N8
+  &none           &kp LCTRL     &none         &kp LS(DELETE)  &kp DELETE         &kp KP_DOT     &kp KP_N1      &kp KP_N2         &kp KP_N3         &kp KP_EQUAL
+                                &kp LEFT_GUI  &kp SPACE       &to 0              &kp KP_N0      &kp BACKSPACE  &to 4
             >;
         };
 
