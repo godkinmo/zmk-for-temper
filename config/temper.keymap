@@ -54,7 +54,7 @@
         compatible = "zmk,combos";
 
         combo_esc {
-            bindings = <&none>;
+            bindings = <&gresc>;
             key-positions = <0 1>;
         };
 
