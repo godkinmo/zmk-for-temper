@@ -48,6 +48,16 @@
 
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        ctrltab: ctrltab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRLTAB";
+            bindings = <&kp LCTRL>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
     };
 
     combos {
