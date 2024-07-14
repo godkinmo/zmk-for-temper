@@ -102,11 +102,6 @@
             bindings = <&kp LEFT>;
             key-positions = <21 22>;
         };
-
-        combo_as_tab {
-            bindings = <&kp TAB>;
-            key-positions = <10 11>;
-        };
     };
 
     macros {
