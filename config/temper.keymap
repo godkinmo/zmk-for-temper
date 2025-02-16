@@ -58,6 +58,16 @@
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
+        grave_escape: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GRAVE_ESCAPE";
+            bindings = <&kp ESC>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+            keep-mods = <(MOD_LGUI)>;
+        };
     };
 
     combos {
@@ -125,18 +135,18 @@
 
         Base {
             bindings = <
-  &kp Q           &kp W             &kp E         &kp R             &kp T    &kp Y      &kp U         &kp I        &kp O           &kp P
-  &mt LEFT_GUI A  &mt LEFT_ALT S    &mt LCTRL D   &mt LEFT_SHIFT F  &kp G    &kp H      &mt RSHIFT J  &mt RCTRL K  &mt LEFT_ALT L  &mt RGUI SEMI
-  &lt 3 Z         &mt LEFT_SHIFT X  &kp C         &kp V             &kp B    &kp N      &kp M         &kp COMMA    &kp DOT         &lt 5 SLASH
-                                    &kp LEFT_GUI  &kp SPACE         &sl 2    &kp ENTER  &super_bspc   &sl 4
+  &kp Q           &kp W             &kp E         &kp R             &kp T    &kp Y      &kp U         &kp I          &kp O           &kp P
+  &mt LEFT_GUI A  &mt LEFT_ALT S    &mt LCTRL D   &mt LEFT_SHIFT F  &kp G    &kp H      &mt RSHIFT J  &mt RCTRL K    &mt LEFT_ALT L  &mt RGUI SEMI
+  &lt 3 Z         &mt LEFT_SHIFT X  &kp C         &kp V             &kp B    &kp N      &kp M         &kp COMMA      &kp DOT         &lt 5 SLASH
+                                    &kp LEFT_WIN  &kp SPACE         &sl 2    &kp ENTER  &super_bspc   &grave_escape
             >;
         };
 
         DeadState_v2 {
             bindings = <
   &kp AMPS     &kp LBKT  &kp LBRC           &kp RBRC            &kp LPAR          &kp EQUAL  &kp STAR       &kp RPAR      &kp PLUS    &kp RBKT
-  &kp TILDE    &kp AT    &kp LT             &kp GT              &kp MINUS         &kp GRAVE  &kp DQT        &kp COLON     &kp DOLLAR  &kp BACKSLASH
-  &kp PERCENT  &kp HASH  &kp DOUBLE_QUOTES  &marco_arrow_right  &kp UNDERSCORE    &kp PIPE   &kp EXCL       &kp QUESTION  &kp CARET   &kp SLASH
+  &kp TILDE    &kp AT    &kp LT             &kp GT              &kp MINUS         &kp GRAVE  &kp DQT        &kp COLON     &kp DOLLAR  &kp SLASH
+  &kp PERCENT  &kp HASH  &kp DOUBLE_QUOTES  &marco_arrow_right  &kp UNDERSCORE    &kp PIPE   &kp EXCL       &kp QUESTION  &kp CARET   &kp BACKSLASH
                          &to 0              &kp SPACE           &sk LEFT_SHIFT    &kp TAB    &kp BACKSPACE  &to 0
             >;
         };
@@ -144,8 +154,8 @@
         Dvorak_DeadState_v2 {
             bindings = <
   &kp N1      &kp N2     &kp N3     &kp N4                &kp N5            &kp N6    &kp N7         &kp N8        &kp N9        &kp N0
-  &kp TILDE   &kp RBKT   &kp LS(W)  &kp LS(E)             &kp KP_MINUS      &kp PLUS  &kp LS(Z)      &kp LS(Q)     &kp GRAVE     &kp BACKSLASH
-  &kp LS(N1)  &kp EQUAL  &kp LS(Z)  &marco_arrow_right_d  &kp LS(SQT)       &kp PIPE  &kp MINUS      &kp LS(LBKT)  &kp LS(RBKT)  &kp LBKT
+  &kp TILDE   &kp RBKT   &kp LS(W)  &kp LS(E)             &kp KP_MINUS      &kp PLUS  &kp LS(Z)      &kp LS(Q)     &kp GRAVE     &kp LEFT_BRACKET
+  &kp LS(N1)  &kp EQUAL  &kp LS(Z)  &marco_arrow_right_d  &kp LS(SQT)       &kp PIPE  &kp MINUS      &kp LS(LBKT)  &kp LS(RBKT)  &kp BACKSLASH
                          &to 0      &kp SPACE             &sk LEFT_SHIFT    &kp TAB   &kp BACKSPACE  &to 0
             >;
         };
@@ -161,10 +171,10 @@
 
         nav_layer {
             bindings = <
-  &gresc          &none    &none         &none      &none      &none      &kp HOME         &kp END    &kp LA(LG(LEFT_BRACKET))  &kp LA(LG(RIGHT_BRACKET))
-  &kp LEFT        &kp UP   &kp DOWN      &kp RIGHT  &kp TAB    &none      &sk RIGHT_SHIFT  &sk RCTRL  &sk LEFT_ALT              &sk RIGHT_GUI
-  &sk LEFT_SHIFT  &kp DEL  &none         &none      &none      &none      &kp RET          &none      &kp LEFT                  &kp RIGHT
-                           &kp LEFT_GUI  &kp SPACE  &to 0      &kp ENTER  &to 0            &to 0
+  &gresc          &none    &none           &none      &none      &none      &kp HOME         &kp END    &kp LA(LG(LEFT_BRACKET))  &kp LA(LG(RIGHT_BRACKET))
+  &kp LEFT        &kp UP   &kp DOWN        &kp RIGHT  &kp TAB    &none      &sk RIGHT_SHIFT  &sk RCTRL  &sk LEFT_ALT              &sk RIGHT_GUI
+  &sk LEFT_SHIFT  &kp DEL  &none           &none      &none      &none      &kp RET          &none      &kp LEFT                  &kp RIGHT
+                           &kp LEFT_SHIFT  &kp SPACE  &to 0      &kp ENTER  &to 0            &to 0
             >;
         };
 
