@@ -8,6 +8,9 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define DEFAULT 0
 #define QWERTY 1
@@ -194,6 +197,15 @@
   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR               &kp LG(LA(LEFT))   &kp F4           &kp F5             &kp F6  &kp F11
   &kp LS(TAB)   &kp C_PREV    &kp C_PP      &kp C_NEXT    &kp LG(LA(BACKSLASH))    &kp LG(LA(RIGHT))  &kp F1           &kp F2             &kp F3  &none
                               &kp LEFT_GUI  &kp LEFT_ALT  &kp LG(LA(BACKSLASH))    &kp LG(LA(COMMA))  &kp LG(LA(DOT))  &kp LG(LA(SLASH))
+            >;
+        };
+
+        mouse_move {
+            bindings = <
+  &trans  &trans  &trans  &trans  &trans    &trans  &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &msc SCRL_UP    &msc SCRL_DOWN   &trans
+                  &trans  &trans  &trans    &trans  &trans          &trans
             >;
         };
     };
