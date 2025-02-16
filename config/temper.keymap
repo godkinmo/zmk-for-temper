@@ -68,6 +68,16 @@
             mods = <(MOD_LGUI)>;
             keep-mods = <(MOD_LGUI)>;
         };
+
+        ctrl_guialttab: ctrl_guialttab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CTRL_GUIALTTAB";
+            bindings = <&kp LCTRL>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_LGUI)>;
+            keep-mods = <(MOD_LALT)>;
+        };
     };
 
     combos {
@@ -153,10 +163,10 @@
 
         Dvorak_DeadState_v2 {
             bindings = <
-  &kp N1      &kp N2     &kp N3     &kp N4                &kp N5            &kp N6    &kp N7         &kp N8        &kp N9        &kp N0
-  &kp TILDE   &kp RBKT   &kp LS(W)  &kp LS(E)             &kp KP_MINUS      &kp PLUS  &kp LS(Z)      &kp LS(Q)     &kp GRAVE     &kp LEFT_BRACKET
-  &kp LS(N1)  &kp EQUAL  &kp LS(Z)  &marco_arrow_right_d  &kp LS(SQT)       &kp PIPE  &kp MINUS      &kp LS(LBKT)  &kp LS(RBKT)  &kp BACKSLASH
-                         &to 0      &kp SPACE             &sk LEFT_SHIFT    &kp TAB   &kp BACKSPACE  &to 0
+  &kp N1      &kp N2     &kp N3     &kp N4                &kp N5            &kp N6    &kp N7       &kp N8        &kp N9        &kp N0
+  &kp TILDE   &kp RBKT   &kp LS(W)  &kp LS(E)             &kp KP_MINUS      &kp PLUS  &kp LS(Z)    &kp LS(Q)     &kp GRAVE     &kp LEFT_BRACKET
+  &kp LS(N1)  &kp EQUAL  &kp LS(Z)  &marco_arrow_right_d  &kp LS(SQT)       &kp PIPE  &kp MINUS    &kp LS(LBKT)  &kp LS(RBKT)  &kp BACKSLASH
+                         &to 0      &kp SPACE             &sk LEFT_SHIFT    &kp TAB   &kp LS(TAB)  &kp LEFT_WIN
             >;
         };
 
